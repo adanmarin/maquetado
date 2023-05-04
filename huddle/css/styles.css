@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/bg-desktop.svg");
+    background-size:cover;
+    background-color: #674BB0;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.main__container .main__container--social .main__container--social-icon{
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+.main__container .main__container-logo{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.main__container .main__container-middle{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main__container .main__container-middle .main__container-middle-build{
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+.main__container .main__container-middle .main__container-middle-build .main__container-middle-build--title{ 
+    color: #FFF;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.main__container .main__container-middle .main__container-middle-build .main__container-middle-build--paragh {
+    margin-top: -60px;
+    padding-right: 200px;
+    color: #FFF;
+    font-size: 20px;
+}
+.main__container .main__container-middle .main__container-middle-build .main__container-middle-build--button{
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    background-color: #FFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 1px 6px 1px rgb(82, 81, 81) ;
+}
+
+.main__container .main__container-middle .main__container-middle-build .main__container-middle-build--button:hover{
+    color: #FFF;
+    background-color: #E880E7;
+}
+.main__container .main__container--social{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    margin-right: 200px;
+}
+
+.main__container .main__container--social .main__container--social-icon{
+    margin-left: 15px;
+}
+.main__container .main__container--social .main__container--social-icon:hover{
+    color: #E880E7;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    main{
+        background-image: url("../images/bg-mobile.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .main__container .main__container-middle{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main__container .main__container--mockup img{
+        width: 400px;
+        margin-top: -120px;
+    }
+    .main__container .main__container-logo {
+        margin-bottom: 15px;
+    }
+    .main__container .main__container-logo img{
+        width: 156px;
+        height: 44.33;
+    }
+    .main__container .main__container-middle .main__container-middle-build{
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .main__container .main__container-middle .main__container-middle-build .main__container-middle-build--title{ 
+        color: #FFF;
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .main__container .main__container-middle .main__container-middle-build .main__container-middle-build--paragh {
+        color: #FFF;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-right: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .main__container .main__container-middle .main__container-middle-build .main__container-middle-build--button{
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+        margin-top: 22px;
+        
+    }
+    .main__container .main__container--social{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 30px;
+        align-items: center;
+        margin-right: 0;
+    }
+}
