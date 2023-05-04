@@ -1,0 +1,96 @@
+@import "vars";
+@mixin menu__buttons ($border-color,$menu__buttons_height) {
+    width: 150px;
+    height: $menu__buttons_height;
+    padding: 5px;
+    border: 1px solid $border-color;
+    background-color: $primary-background;
+    color:$font-white;
+    border-radius: 15px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $family-font;
+    font-size: $primary-font-size;
+}
+
+.promo__container{
+    background: rgb(65,76,251);
+    background: linear-gradient(310deg, rgba(65,76,251,1) 0%, rgba(251,65,236,1) 50%, rgba(68,76,251,1) 100%);
+    text-align: center;
+    color:$font-white;
+    padding: 15px 0;
+}
+
+.header__container{
+    background-color: $primary-background;
+    color:$font-white;
+    height: 60px;
+    .nav__container{
+        padding-top: 20px;
+    }
+    .menu__list{
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        list-style: none;
+        .menu__logo{
+                height: 30px;
+        }
+        .menu__item {
+            &:hover{
+                color:$primary-hover-color;
+            }
+            .menu__item-buttom{
+                @include menu__buttons($border-color:gray,$menu__buttons_height:35px)
+                
+            }
+            .menu__item-buttom--aqua{
+                border: 1px solid aqua;
+            }
+            
+        }
+        .menu__item-button-burger{
+            display: none;
+        }
+    }
+
+}
+.main__container{
+    background-color: $primary-background;
+    height: 100vh;
+    color:$font-white;
+    .landing__container{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > * {
+            margin: 15px;
+        }
+        .landind__title{
+            font-size: 52px;
+            font-weight: bold;
+            color: purple;
+        }
+        .landing__buttons{
+            .landing__button-item{
+                @include menu__buttons($border-color:gray,$menu__buttons_height:60px)
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .menu__item{
+        display: none;
+    }
+    .header__container .menu__list .menu__item-button-burger{
+        display: block;
+    }
+}
+
+
